@@ -1,0 +1,17 @@
+# IZ Pâtisserie & Café — https://iz.cafe
+# The live site had no robots.txt; the SPA catch-all returned index.html for it.
+
+User-agent: *
+Allow: /
+
+# Keep auth + order endpoints out of the index.
+Disallow: /api/
+Disallow: /auth/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+Sitemap: https://iz.cafe/sitemap.xml

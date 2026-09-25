@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Content Security Policy.
+      'unsafe-inline' is required for style because the production build inlines
+      CSS into the document. Ship the header version of this policy from your
+      edge/CDN too — a <meta> CSP cannot express frame-ancestors or report-uri.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               base-uri 'self';
+               object-src 'none';
+               form-action 'self';
+               img-src 'self' data: blob:;
+               font-src 'self' https://fonts.gstatic.com data:;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+               script-src 'self' 'unsafe-inline';
+               connect-src 'self';
+               frame-ancestors 'none';
+               upgrade-insecure-requests"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <title>IZ Pâtisserie &amp; Café | Artisanal Pastries &amp; Specialty Coffee in Dhaka</title>
+    <meta
+      name="description"
+      content="Award-loved patisserie and specialty coffee house in Dhaka. Laminated pastries baked every morning, single-origin espresso, and all-day brunch across Gulshan 2, Dhanmondi and Mirpur 12."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#1A120B" />
+
+    <!-- Canonical points at the domain that actually resolves. -->
+    <link rel="canonical" href="/logo.png" />
+
+    <link rel="preconnect" href="/logo.png" />
+    <link rel="preconnect" href="/logo.png" crossorigin />
+
+    <link
+      rel="icon"
+      href="/logo.png"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Crawler / no-JS fallback. The live site shipped an empty #root with no
+      fallback at all, so anything that does not execute JS saw a blank page.
+    -->
+    <noscript>
+      <div style="max-width:52rem;margin:0 auto;padding:3rem 1.5rem;font-family:Georgia,serif;color:#F5EBDD;background:#1A120B">
+        <h1>IZ Pâtisserie &amp; Café</h1>
+        <p>Artisanal pastries and specialty coffee in Dhaka. Open daily, 8:00&nbsp;AM – 11:00&nbsp;PM.</p>
+        <h2>Our branches</h2>
+        <ul>
+          <li><strong>Gulshan 2</strong> — Concord Baksh Tower, House 11/A, Road 48, Dhaka 1212. <a style="color:#C6A75E" href="/logo.png">01329 731723</a></li>
+          <li><strong>Dhanmondi</strong> — Concord Sohel Square, Level 5, 75 Satmasjid Road, Dhaka 1209. <a style="color:#C6A75E" href="/logo.png">01335 259229</a></li>
+          <li><strong>Mirpur 12</strong> — Safura Tower, Road 7, Mirpur 12, Dhaka 1216. <a style="color:#C6A75E" href="/logo.png">01770 024245</a></li>
+        </ul>
+        <p>Enable JavaScript for the full experience, or email
+          <a style="color:#C6A75E" href="/logo.png">info@iz.cafe</a>.</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
