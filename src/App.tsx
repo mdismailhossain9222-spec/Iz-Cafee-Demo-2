@@ -2,7 +2,7 @@ import { AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 // Social thumbnails perform better with food than with an empty room, so the
 // pastry-counter shot stays as the og:image even though the hero is now the interior.
-import ogImg from "./assets/hero.jpg?inline";
+import ogImg from "/logo.png";
 import { ARTICLES } from "./data";
 import { CartProvider } from "./lib/cart";
 import { applySeo, seoForRoute } from "./lib/seo";
