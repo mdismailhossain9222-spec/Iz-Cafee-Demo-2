@@ -315,3 +315,4 @@ function ItemDetail({ item, onClose }: { item: MenuItem | null; onClose: () => v
     </AnimatePresence>
   );
 }
+

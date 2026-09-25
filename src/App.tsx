@@ -80,3 +80,4 @@ function Page({ route, param }: { route: string; param?: string }) {
 
 /** Exposed for the SEO module so it can resolve article titles. */
 export const ARTICLE_SLUGS = ARTICLES.map((a) => a.slug);
+

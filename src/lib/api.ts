@@ -143,3 +143,4 @@ export type LoginResponse = {
   member: { name: string; tier: string; points: number; email: string };
 };
 export type OrderResponse = { ok: true; reference: string; etaMinutes: number };
+

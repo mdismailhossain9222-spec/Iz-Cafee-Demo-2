@@ -594,3 +594,4 @@ export const MARQUEE = [
   "Baked Every Morning",
   "Gulshan · Dhanmondi · Mirpur",
 ];
+

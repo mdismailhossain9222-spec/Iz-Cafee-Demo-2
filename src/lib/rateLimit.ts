@@ -108,3 +108,4 @@ export function formatDuration(ms: number): string {
   const rem = s % 60;
   return rem ? `${m}m ${rem}s` : `${m}m`;
 }
+

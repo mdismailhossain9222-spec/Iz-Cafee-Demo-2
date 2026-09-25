@@ -162,3 +162,4 @@ export default function CartDrawer({ open, onClose }: { open: boolean; onClose: 
     </AnimatePresence>
   );
 }
+
