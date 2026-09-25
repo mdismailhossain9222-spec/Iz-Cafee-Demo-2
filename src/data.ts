@@ -5,7 +5,7 @@ import brunch from "./assets/brunch.jpg?inline";
 import matcha from "./assets/matcha.jpg?inline";
 import barista from "./assets/barista.jpg?inline";
 import interior from "./assets/interior.jpg?inline";
-import counter from "./assets/Hero.jpg?inline";
+import counter from "./assets/hero.jpg?inline";
 
 export const IMG = { cruffin, freddo, cheesecake, brunch, matcha, barista, interior, counter };
 

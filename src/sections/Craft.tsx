@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import barista from "../assets/barista.jpg?inline";
-import counter from "../assets/Hero.jpg?inline";
+import counter from "../assets/hero.jpg?inline";
 import { CRAFT_STATS } from "../data";
 import { AnimatedText, Layer, Reveal, Tilt } from "../components/motion-primitives";
 import { Clock, Leaf, Spark } from "../components/Icons";
