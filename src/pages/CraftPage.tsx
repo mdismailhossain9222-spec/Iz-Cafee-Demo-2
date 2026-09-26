@@ -146,7 +146,8 @@ function Process() {
                     i % 2 === 0 ? "lg:ml-auto lg:flex-row lg:pl-12" : "lg:flex-row-reverse lg:pr-12 lg:text-right"
                   }`}
                 >
-                  <span className="relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-full border border-gold-500/40 bg-espresso-950 lg:absolute lg:top-0 lg:-translate-y-0 lg:[--off:-1.5rem]"
+                  <span
+                    className="relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-full border border-gold-500/40 bg-espresso-950 lg:absolute lg:top-0 lg:-translate-y-0 lg:[--off:-1.5rem]"
                     style={i % 2 === 0 ? { left: "-1.5rem" } : { right: "-1.5rem" }}
                   >
                     <span className="font-display text-sm text-gold-400">{p.step}</span>
@@ -194,39 +195,33 @@ function Timeline() {
   );
 }
 
-/* ---------------- Team ---------------- */
+/* ------------------ Team (No Images) ------------------ */
 
 function Team() {
   return (
     <section className="bg-espresso-950 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
-        <SectionHeading eyebrow="The People" title="Who actually" accent="folds the dough" center />
+        <SectionHeading 
+          eyebrow="The People" 
+          title="Who actually" 
+          accent="folds the dough" 
+        />
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {TEAM.map((m, i) => (
             <Reveal key={m.name} delay={i * 0.1}>
-              <Tilt className="group h-full" max={8}>
-                <figure className="preserve-3d relative h-full overflow-hidden rounded-2xl border border-cream-200/10 bg-espresso-900/60 transition-colors duration-500 group-hover:border-gold-500/40">
-                  <div className="relative h-60 overflow-hidden">
-                    <img
-                      src={m.image}
-                      alt={m.name}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[1.3s] group-hover:scale-[1.1]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-espresso-900 via-espresso-900/20 to-transparent" />
-                  </div>
-                  <figcaption className="p-6">
+              <Tilt className="group h-full">
+                <div className="h-full rounded-2xl border border-cream-200/10 bg-espresso-900/60 p-6 backdrop-blur-sm transition-all duration-300 hover:border-gold-500/40 hover:bg-espresso-900/90 shadow-xl flex flex-col justify-between">
+                  <div>
                     <h3 className="font-display text-xl text-cream-50">{m.name}</h3>
-                    <p className="mt-1 text-[11px] tracking-[0.18em] text-gold-500/85 uppercase">{m.role}</p>
-                    <p className="mt-3 text-[13px] leading-relaxed text-cream-200/55">{m.bio}</p>
-                  </figcaption>
-                </figure>
+                    <p className="mt-1 text-[11px] tracking-[0.18em] text-gold-400 uppercase">{m.role}</p>
+                    <p className="mt-4 text-[13px] leading-relaxed text-cream-200/65">{m.bio}</p>
+                  </div>
+                </div>
               </Tilt>
             </Reveal>
           ))}
         </div>
-        <Ornament className="mt-20" />
       </div>
     </section>
   );
@@ -266,4 +261,3 @@ function CraftCta() {
     </section>
   );
 }
-

@@ -1,26 +1,10 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import barista from "../assets/barista.jpg";
+import counter from "../assets/hero.jpg";
 import { CRAFT_STATS } from "../data";
 import { AnimatedText, Layer, Reveal, Tilt } from "../components/motion-primitives";
 import { Clock, Leaf, Spark } from "../components/Icons";
-
-const TEAM = [
-  {
-    name: "Ishrat Zaman",
-    role: "FOUNDER & HEAD PASTRY CHEF",
-    bio: "Trained in laminated doughs and viennoiserie. Sets every recipe and still folds the first batch most mornings.",
-  },
-  {
-    name: "Rafiq Hasan",
-    role: "HEAD OF COFFEE",
-    bio: "Runs the cupping table and dials the bar daily. Believes a flat white should be drunk within ninety seconds.",
-  },
-  {
-    name: "Nusrat Jahan",
-    role: "PASTRY SOUS CHEF",
-    bio: "Owns the overnight ferment and the dessert counter. The Basque cheesecake is hers, and she will not share the recipe.",
-  },
-];
 
 const PILLARS = [
   { icon: Leaf, title: "Sourced close", body: "Single-origin beans cupped in-house, rotated each season." },
@@ -38,20 +22,20 @@ export default function Craft() {
   return (
     <section id="craft" ref={ref} className="relative overflow-hidden bg-espresso-900 py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-5 lg:px-10">
-        
-        {/* Main Craft Section */}
-        <div className="grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20 mb-24">
+        <div className="grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <div className="scene relative h-[30rem] sm:h-[34rem]">
             <motion.div style={{ y: yA }} className="absolute top-0 left-0 w-[68%]">
               <Tilt max={9} className="group">
-                <div className="preserve-3d overflow-hidden rounded-2xl border border-gold-500/20 shadow-[0_50px_90px_-40px_rgba(0,0,0,.95)] h-64 bg-espresso-950/40">
+                <div className="preserve-3d overflow-hidden rounded-2xl border border-gold-500/20 shadow-[0_50px_90px_-40px_rgba(0,0,0,.95)]">
+                  <img src={barista} alt="Crafting coffee" className="h-full w-full object-cover" />
                 </div>
               </Tilt>
             </motion.div>
 
             <motion.div style={{ y: yB }} className="absolute right-0 bottom-0 w-[58%]">
               <Tilt max={11} className="group">
-                <div className="preserve-3d overflow-hidden rounded-2xl border border-gold-500/25 shadow-[0_50px_90px_-35px_rgba(0,0,0,1)] h-64 bg-espresso-950/40">
+                <div className="preserve-3d overflow-hidden rounded-2xl border border-gold-500/25 shadow-[0_50px_90px_-35px_rgba(0,0,0,1)]">
+                  <img src={counter} alt="Bakery counter" className="h-full w-full object-cover" />
                 </div>
               </Tilt>
             </motion.div>
@@ -85,7 +69,7 @@ export default function Craft() {
             <Reveal delay={0.2}>
               <p className="mt-7 leading-relaxed text-cream-200/70">
                 Every laminated dough at IZ is folded by hand, rested overnight, and baked in small
-                batches through the morning. Nothing is held over. When the tray is empty, it is empty —
+                batches through the morning. Nothing is held over. When the tray is empty, it is empty �
                 which is why the 8 AM shelf looks nothing like the 4 PM one.
               </p>
               <p className="mt-4 leading-relaxed text-cream-200/70">
@@ -118,34 +102,6 @@ export default function Craft() {
             </div>
           </div>
         </div>
-
-        {/* Team Section Title */}
-        <div className="text-center mb-12 border-t border-cream-200/10 pt-16">
-          <p className="text-[11px] tracking-[0.36em] text-gold-500 uppercase mb-3">— THE PEOPLE —</p>
-          <h2 className="font-display text-4xl leading-[1.05] font-medium text-cream-50 sm:text-5xl">
-            Who actually <br />
-            <span className="text-gold-400 italic">folds the dough</span>
-          </h2>
-        </div>
-
-        {/* 3 People Cards - Blank Image Box */}
-        <div className="grid gap-6 sm:grid-cols-3">
-          {TEAM.map((member, i) => (
-            <Reveal key={member.name} delay={0.1 * i}>
-              <div className="rounded-2xl border border-cream-200/10 bg-espresso-950/60 p-6 transition-colors hover:border-gold-500/35 h-full">
-                <div className="mb-6 h-48 rounded-xl border border-cream-200/10 bg-espresso-900/50 w-full" />
-                <h3 className="font-display text-xl text-cream-50">{member.name}</h3>
-                <p className="mt-1 text-[10px] tracking-[0.2em] text-gold-500 uppercase font-medium">
-                  {member.role}
-                </p>
-                <p className="mt-3 text-xs leading-relaxed text-cream-200/70">
-                  {member.bio}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
       </div>
     </section>
   );
